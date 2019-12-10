@@ -10,7 +10,7 @@ const title = "nenly.com"
 
 // Claims jwt object
 type Claims struct {
-	Spec interface{}
+	Spec map[string]interface{}
 	jwt.StandardClaims
 }
 

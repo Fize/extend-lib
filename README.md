@@ -5,5 +5,5 @@ golang common library functions
 ## intall
 
 ```
-    go get -u -v dev.nenly.cn/diffusion/83/extend-lib
+    go get -u -v github.com/fize/extend-lib
 ```
