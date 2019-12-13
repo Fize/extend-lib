@@ -1,4 +1,4 @@
-module extend-lib
+module github.com/fize/extend-lib
 
 go 1.13
 
