@@ -15,7 +15,7 @@ import (
 func LoadConfig(fname string, cfg interface{}) {
 	if fname == "" {
 		glog.V(3).Infof("load configuration from environment")
-		err := envconfig.Process("app", &cfg)
+		err := envconfig.Process("app", cfg)
 		if err != nil {
 			glog.Fatal(err)
 		} else {
