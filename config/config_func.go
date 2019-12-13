@@ -7,13 +7,21 @@ import (
 	"strings"
 
 	"github.com/golang/glog"
+	"github.com/kelseyhightower/envconfig"
 	"gopkg.in/yaml.v2"
 )
 
 // LoadConfig load configure
 func LoadConfig(fname string, cfg interface{}) {
 	if fname == "" {
-		glog.Fatal("use -c to specify configuration file")
+		glog.V(3).Infof("load configuration from environment")
+		err := envconfig.Process("app", &cfg)
+		if err != nil {
+			glog.Fatal(err)
+		} else {
+			glog.V(3).Infoln("config file load successfully")
+		}
+		return
 	}
 
 	if !exist(fname) {

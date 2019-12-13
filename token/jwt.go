@@ -6,7 +6,7 @@ import (
 	"github.com/dgrijalva/jwt-go"
 )
 
-const title = "nenly.com"
+const title = "fizz"
 
 // Claims jwt object
 type Claims struct {
