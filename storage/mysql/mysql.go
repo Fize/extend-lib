@@ -2,8 +2,9 @@ package mysql
 
 import (
 	"errors"
-	"extend-lib/storage"
 	"fmt"
+
+	"github.com/fize/extend-lib/storage"
 
 	"github.com/golang/glog"
 	"github.com/jinzhu/gorm"
